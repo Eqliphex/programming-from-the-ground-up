@@ -1,6 +1,6 @@
 Know the Concepts:
 
-• Describe the fetch-execute cycle.
+• <b>Describe the fetch-execute cycle.</b>
     - It is essentialy the process of reading the memory intructions one at a time, and executing it.
     - The following is the outline of the process:
         1. Read the program counter for the next address containing an instruction.
@@ -27,7 +27,7 @@ Know the Concepts:
  
 • What are the addressing modes and what are they used for?
     - Immidiate mode:
-                → ... 
+        -> ... 
     - Register addressing mode:
     - Direct addressing mode:
     - Indirect addressing mode:
