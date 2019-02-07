@@ -6,7 +6,7 @@ Know the Concepts:
         1. Read the program counter for the next address containing an instruction.
 	2. Decode the fetched instruction, which decides what operation that needs to be done.
 	3. Use the databus to fetch involved memory locations
-	4. Pass the fetched data to logic and arithmetic unit for execution.
+	4. Pass the fetched data to the logic and arithmetic unit for execution.
 
 
 • What is a register? How would computation be more difficult without registers?
@@ -14,10 +14,26 @@ Know the Concepts:
     - It would be more difficult to decide what memory to dedicate to execution.
   
 • How do you represent numbers larger than 255?
-    - 
+    - Since we use a byte or 8 bits to represent 0-255 on each address, we will need to occupy and combine 
+      more than one address to represent larger numbers.
+  
 • How big are the registers on the machines we will be using?
+    - Since we will be using an x86 architecture, the registers will be 4 bytes or 1 word long.
+    - Conversely, should we use an x64 architecture, then we would be able to use 8 bytes or 2 words long registers.
+ 
 • How does a computer know how to interpret a given byte or set of bytes of memory?
+    - Inherently it doesn't know, since all values are stored equal and the way in which we access them,
+      determines what it does.
+ 
 • What are the addressing modes and what are they used for?
+    - Immidiate mode:
+                → ... 
+    - Register addressing mode:
+    - Direct addressing mode:
+    - Indirect addressing mode:
+    - Indexed addressing mode:
+    - Base pointer addressing mode
+
 • What does the instruction pointer do?
 
 Use the Concepts
