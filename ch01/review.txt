@@ -1,6 +1,6 @@
 Know the Concepts:
 
-• <b>Describe the fetch-execute cycle.</b>
+• Describe the fetch-execute cycle.
     - It is essentialy the process of reading the memory intructions one at a time, and executing it.
     - The following is the outline of the process:
         1. Read the program counter for the next address containing an instruction.
