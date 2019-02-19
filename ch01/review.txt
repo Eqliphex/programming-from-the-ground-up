@@ -46,10 +46,15 @@ Use the Concepts
 
 • What data would you use in an employee record? How would you lay it out in memory?
     - I would use names, addresses, id and mails. 
-    - You could reasonably justify a static length record, since things such as names and addresses tend to be inside a certain length.
-      The downside is, that there is a potential for a lot of "wasted" space, if the entries does not occupy all the allocated space.
+    - You could reasonably justify a static length record, since things such as names and 
+      addresses tend to be inside a certain length.
+      The downside is, that there is a potential for a lot of "wasted" space, 
+      if the entries does not occupy all the allocated space.
+
 • If I had the pointer the the beginning of the employee record above, and wanted to access a
   particular piece of data inside of it, what addressing mode would I use?
+    - 
+  
 • In base pointer addressing mode, if you have a register holding the value 3122, and an offset of
   20, what address would you be trying to access?
 • In indexed addressing mode, if the base address is 6512, the index register has a 5, and the
