@@ -27,14 +27,20 @@ Know the Concepts:
  
 • What are the addressing modes and what are they used for?
     - Immidiate mode:
-        -> ... 
+        -> Indicates that the insctruction is the value to use. 
     - Register addressing mode:
+        -> The instruction contains which register to access.
     - Direct addressing mode:
+        -> The instruction contains a memory address to go to next. 
     - Indirect addressing mode:
+        -> Instruction contains a register with a pointer pointing towards the data that needs to be accessed.
     - Indexed addressing mode:
+        -> Instruction contains an offset number used to jump a set amount like a byte or a word.
     - Base pointer addressing mode
+        -> Similar to indirect pointer mode, but includes an offset.
 
 • What does the instruction pointer do?
+    - It denotes if a memory location is an instruction, the computer would have no idea which was what without it. 
 
 Use the Concepts
 
