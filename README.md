@@ -4,11 +4,13 @@ Programming exercises from the book "Programming from the Ground Up" by Josh Bar
 Grab a copy here: 
 [Programming from the Ground Up by Josh Bartlett](https://download-mirror.savannah.gnu.org/releases/pgubook/ProgrammingGroundUp-1-0-booksize.pdf)
 
-## Prerequisits
-_**General**_
-* The provided programs are _unlinked_ which means that you will have to assemble them yourself on your own machine.
+## Prerequisites
+_**General:**_ <br>
+The provided programs are _unlinked_ which means that you will have to assemble them yourself on your own machine.
+<br>
+<br>
+_**Windows:**_ <br>
 
-_**Windows:**_
 
 _**Linux:**_ <br>
 In this book a Linux version 16 x86 is used, which already have the _**AS**_ -module installed. 
