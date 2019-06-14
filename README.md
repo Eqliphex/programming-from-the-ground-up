@@ -7,13 +7,12 @@ Grab a copy here:
 ## Prerequisites
 _**General:**_ <br>
 The provided programs are ---_unlinked_--- which means that you will have to assemble them yourself on your own machine.
-<br>
-<br>
+
 _**Windows:**_ <br>
 
 
 _**Linux:**_ <br>
-In this book a Linux version 16 x86 is used, which already have the _**AS**_ -module installed. 
+In this book a Linux Ubuntu x86 version 16.04.6 Xenial Xerus used, which already have the Assembly (_AS_)-module installed. 
 
 
     Something
