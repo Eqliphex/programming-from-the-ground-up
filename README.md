@@ -10,7 +10,7 @@ _**General**_
 
 _**Windows:**_
 
-_**Linux:**_
+_**Linux:**_ <br>
 In this book a Linux version 16 x86 is used, which already have the _**AS**_ -module installed. 
 
 
