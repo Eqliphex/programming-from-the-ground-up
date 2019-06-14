@@ -8,6 +8,9 @@ Grab a copy here:
 _**Programs:**_
 *	[review.txt](https://github.com/Eqliphex/programming-from-the-ground-up/blob/master/ch02%20-%20Computer_Architecture/review.txt)  -  Review questions on introductionary memory. 
 
+I think you should use an
+`<addr>` element here instead.
+
 ## Chapter 3 - Your first assembly program
 _**Programs:**_
 *	[exit.s](https://github.com/Eqliphex/programming-from-the-ground-up/blob/master/ch03%20-%20Your_First_Programs/exit.s)  -  Simple program, to showcase exit functionality.
