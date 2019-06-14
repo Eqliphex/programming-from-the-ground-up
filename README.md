@@ -5,6 +5,7 @@ Grab a copy here:
 [Programming from the Ground Up by Josh Bartlett](https://download-mirror.savannah.gnu.org/releases/pgubook/ProgrammingGroundUp-1-0-booksize.pdf)
 
 ## Chapter 2 - Computer Architecture
+Chapter 3
 ---------
 *	[review.txt](https://github.com/Eqliphex/programming-from-the-ground-up/blob/master/ch02%20-%20Computer_Architecture/review.txt)  -  Review questions on introductionary memory. 
 
