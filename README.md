@@ -4,12 +4,25 @@ Programming exercises from the book "Programming from the Ground Up" by Josh Bar
 Grab a copy here: 
 [Programming from the Ground Up by Josh Bartlett](https://download-mirror.savannah.gnu.org/releases/pgubook/ProgrammingGroundUp-1-0-booksize.pdf)
 
+## Prerequisits
+_**General**_
+* The provided programs are _unlinked_ which means that you will have to assemble them yourself on your own machine.
+
+_**Windows:**_
+
+_**Linux:**_
+In this book a Linux version 16 x86 is used, which already have the _**AS**_ -module installed. 
+
+---------
+    Something
+    
+I think you should use an
+`<addr>` element here instead.
+
 ## Chapter 2 - Computer Architecture
 _**Programs:**_
 *	[review.txt](https://github.com/Eqliphex/programming-from-the-ground-up/blob/master/ch02%20-%20Computer_Architecture/review.txt)  -  Review questions on introductionary memory. 
 
-I think you should use an
-`<addr>` element here instead.
 
 ## Chapter 3 - Your first assembly program
 _**Programs:**_
