@@ -6,7 +6,7 @@ Grab a copy here:
 
 ## Prerequisites
 _**General:**_ <br>
-The provided programs are _unlinked_ which means that you will have to assemble them yourself on your own machine.
+The provided programs are ---_unlinked_--- which means that you will have to assemble them yourself on your own machine.
 <br>
 <br>
 _**Windows:**_ <br>
