@@ -34,9 +34,9 @@ Know the Concepts:
 • How big are the registers on the machines we will be using?
     - Since we will be using an x86 architecture, the registers will be 32 bits/4 bytes/1 word long.
     - Conversely, should we use an x64 architecture, then we would be able to use 64 bits/8 bytes/2 words long registers.
- 
+
 • How does a computer know how to interpret a given byte or set of bytes of memory?
-    - Inherently it doesn't know, since all values are stored equally and the way in which we access them, is what
+    - Inherently it doesn't know, since all values are stored equaly and the way in which we access them, is what
       determines what it does.
  
 • What are the addressing modes and what are they used for?
@@ -63,9 +63,9 @@ Use the Concepts
     Start of record:
         name 		(50 bytes) = 50 ASCII characters for surname and lastname 	- Start of record
 	address		(30 bytes) = 30 ASCII characters for adresss 			- Start of record + 50
-	id 		(1 word - 4 bytes) = 4 ASCII characters for id number 		- Start of record + 100
-	mail 		(50 bytes) = 50 ASCII characters for email 			- Start of record + 104
-	department	(20 bytes) = 20 ASCII characters for department name 		- Start of record + 154 
+	id 		(1 word - 4 bytes) = 4 ASCII characters for id number 		- Start of record + 70
+	mail 		(50 bytes) = 50 ASCII characters for email 			- Start of record + 74
+	department	(20 bytes) = 20 ASCII characters for department name 		- Start of record + 124 
 
     Start of record: (Alternative with variable length pointers)
 	names 		(1 word - 4 bytes) = pointer to another address 		- Start of record
