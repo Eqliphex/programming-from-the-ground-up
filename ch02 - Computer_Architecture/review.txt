@@ -16,10 +16,24 @@ Know the Concepts:
 • How do you represent numbers larger than 255?
     - Since we use a byte or 8 bits to represent 0-255 on each address, we will need to occupy and combine 
       more than one address to represent larger numbers.
+    - EXAMPLE: (1 byte)
+	128 64 32 16 8 4 2 1
+	 0  0  0  0  0 0 0 0   = 0
+
+	128 64 32 16 8 4 2 1
+	 1  1  1  1  1 1 1 1   = 255
+
+	Extending with an additional byte (2 bytes total)
+
+	32768 16384 8192 4096 2048 1024 512 256 128 64 32 16 8 4 2 1
+	  0     0    0    0    0    0    0   1   0  0  0  0  0 0 0 0 = 256
+
+	32768 16384 8192 4096 2048 1024 512 256 128 64 32 16 8 4 2 1
+	  1     1    1    1    1    1    1   1   1  1  1  1  1 1 1 1 = 65536
   
 • How big are the registers on the machines we will be using?
-    - Since we will be using an x86 architecture, the registers will be 4 bytes or 1 word long.
-    - Conversely, should we use an x64 architecture, then we would be able to use 8 bytes or 2 words long registers.
+    - Since we will be using an x86 architecture, the registers will be 32 bits/4 bytes/1 word long.
+    - Conversely, should we use an x64 architecture, then we would be able to use 64 bits/8 bytes/2 words long registers.
  
 • How does a computer know how to interpret a given byte or set of bytes of memory?
     - Inherently it doesn't know, since all values are stored equally and the way in which we access them, is what
@@ -47,15 +61,24 @@ Use the Concepts
 • What data would you use in an employee record? How would you lay it out in memory?
     - I would use the following layout: 
     Start of record:
-        names (50 bytes) = 	50 ASCII characters for surname and lastname 	- Start of record
-	addresses (30 bytes) = 	30 ASCII characters for adresss 		- Start of record + 50
-	id (1 word - 4 bytes) = 4 ASCII characters for id number 		- Start of record + 100
-	mail (50 bytes) = 	50 ASCII characters for email 			- Start of record + 104
+        name 		(50 bytes) = 50 ASCII characters for surname and lastname 	- Start of record
+	address		(30 bytes) = 30 ASCII characters for adresss 			- Start of record + 50
+	id 		(1 word - 4 bytes) = 4 ASCII characters for id number 		- Start of record + 100
+	mail 		(50 bytes) = 50 ASCII characters for email 			- Start of record + 104
+	department	(20 bytes) = 20 ASCII characters for department name 		- Start of record + 154 
+
+    Start of record: (Alternative with variable length pointers)
+	names 		(1 word - 4 bytes) = pointer to another address 		- Start of record
+	address 	(1 word - 4 bytes) = pointer to another address 		- Start of record + 4
+	id 		(1 word - 4 bytes) = pointer to another address 		- Start of record + 8
+	mail 		(1 word - 4 bytes) = pointer to another address 		- Start of record + 12
+	department	(1 word - 4 bytes) = pointer to another address 		- Start of record + 16
 
     - You could reasonably justify a static length record, since things such as names and 
       addresses tend to be inside a certain length.
       The downside is, that there is a potential for a lot of "wasted" space, 
-      if the entries does not occupy all the allocated space.
+      if the entries does not occupy all the allocated space, thus variable length is also a valid option, 
+      where we need to remember that the actual data is stored elsewere, and what we have here are only pointers to them.
 
 • If I had the pointer the the beginning of the employee record above, and wanted to access a
   particular piece of data inside of it, what addressing mode would I use?
@@ -64,19 +87,58 @@ Use the Concepts
 • In base pointer addressing mode, if you have a register holding the value 3122, and an offset of
   20, what address would you be trying to access?
     - We would then try and access the address of 3142, since we add the offset to the value in base pointer addressing mode.
+      (3122 + 20 = 3142)
 
 • In indexed addressing mode, if the base address is 6512, the index register has a 5, and the
   multiplier is 4, what address would you be trying to access?
-    - 
+    1. We multiply the index register with the multiplier 		- (5 * 4 = 20)
+    2. Add the result to the base address to find the address we access - (6512 + 20 = 6532)
+
 • In indexed addressing mode, if the base address is 123472, the index register has a 0, and the
   multiplier is 4, what address would you be trying to access?
+    1. We multiply the index register with the multiplier 		- (0 * 4 = 0)
+    2. Add the result to the base address to find the address we access - (6512 + 0 = 123472)
+
 • In indexed addressing mode, if the base address is 9123478, the index register has a 20, and the
   multiplier is 1, what address would you be trying to access?
+    1. We multiply the index register with the multiplier 		- (20 * 1 = 20)
+    2. Add the result to the base address to find the address we access - (9123478 + 20 = 9123498)
 
 Going Further
 • What are the minimum number of addressing modes needed for computation?
+    Resources:
+    - (res 1) http://www.osdata.com/topic/language/asm/address.htm#addressmodes
+    - (res 2) https://stackoverflow.com/questions/35221379/what-is-the-minimum-number-of-addressing-modes-necessary-for-computation
+
+    Answer:
+    - The resources suggest, that we only stricty need indirect addressing, since with that we can do almost everything, albiet
+      with greater difficulity. 
+
 • Why include addressing modes that aren’t strictly needed?
+    - Because we want convinience, and those constructions does some smart things.
+
 • Research and then describe how pipelining (or one of the other complicating factors) affects
 the fetch-execute cycle.
+    Resources:
+    - (res 3) http://www.nku.edu/~foxr/CSC362/NOTES03/ch5.ppt
+    
+    	Answer:
+    - Pipelining uses different hardware for the fetch-execute cycle. The
+      fetch is performed while the execute is being processed by a separate
+      hardware element. Instruction execution can be overlapped in a
+      pipeline.
+
+      This results in improved performance. The fetch can be occurring while
+      the execute is taking place, and is then ready to be executed as soon
+      as the cycle completes. The CPU becomes an assembly line.
+
+
 • Research and then describe the tradeoffs between fixed-length instructions and variable-length
 instructions.
+    (from res 3)
+    - Fixed length makes instruction fetching predictable, which helps out 
+      with performance and pipelining.
+
+      Variable length reduces the memory space required, but has an
+      additional performance overhead. Complicates code.
+
