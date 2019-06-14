@@ -22,12 +22,12 @@ Know the Concepts:
     - Conversely, should we use an x64 architecture, then we would be able to use 8 bytes or 2 words long registers.
  
 • How does a computer know how to interpret a given byte or set of bytes of memory?
-    - Inherently it doesn't know, since all values are stored equal and the way in which we access them,
+    - Inherently it doesn't know, since all values are stored equally and the way in which we access them, is what
       determines what it does.
  
 • What are the addressing modes and what are they used for?
     - Immidiate mode:
-        -> Indicates that the insctruction is the value to use. 
+        -> Indicates that the current instruction is the value to use. 
     - Register addressing mode:
         -> The instruction contains which register to access.
     - Direct addressing mode:
@@ -45,7 +45,13 @@ Know the Concepts:
 Use the Concepts
 
 • What data would you use in an employee record? How would you lay it out in memory?
-    - I would use names, addresses, id and mails. 
+    - I would use the following layout: 
+    Start of record:
+        names (50 bytes) = 	50 ASCII characters for surname and lastname 	- Start of record
+	addresses (30 bytes) = 	30 ASCII characters for adresss 		- Start of record + 50
+	id (1 word - 4 bytes) = 4 ASCII characters for id number 		- Start of record + 100
+	mail (50 bytes) = 	50 ASCII characters for email 			- Start of record + 104
+
     - You could reasonably justify a static length record, since things such as names and 
       addresses tend to be inside a certain length.
       The downside is, that there is a potential for a lot of "wasted" space, 
@@ -53,12 +59,15 @@ Use the Concepts
 
 • If I had the pointer the the beginning of the employee record above, and wanted to access a
   particular piece of data inside of it, what addressing mode would I use?
-    - 
+    - You would use Indexed addressing mode, since we want to go a certain amount of bytes from the current address.
   
 • In base pointer addressing mode, if you have a register holding the value 3122, and an offset of
   20, what address would you be trying to access?
+    - We would then try and access the address of 3142, since we add the offset to the value in base pointer addressing mode.
+
 • In indexed addressing mode, if the base address is 6512, the index register has a 5, and the
   multiplier is 4, what address would you be trying to access?
+    - 
 • In indexed addressing mode, if the base address is 123472, the index register has a 0, and the
   multiplier is 4, what address would you be trying to access?
 • In indexed addressing mode, if the base address is 9123478, the index register has a 20, and the
