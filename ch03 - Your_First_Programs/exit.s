@@ -18,7 +18,10 @@
 #
 
 #    	   Assembler directives:
-.section .data		# Starts the "data" section
+.section .data		# Starts the "data" section 
+			# The data section contains anything 
+			# that you want to be automatically initialized for you 
+			# by the system before it calls the entry point of your program.
 
 .section .text		# Starts the "text" section, where program
 			# instructions live. 
