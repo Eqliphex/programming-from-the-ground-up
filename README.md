@@ -6,16 +6,18 @@ Grab a copy here:
 
 ## Prerequisites
 _**General:**_ <br>
-The provided programs are ---_unlinked_--- which means that you will have to assemble them yourself on your own machine.
+The provided programs are _**unlinked**_ which means that you will have to assemble them yourself on your own machine.
+
+
 
 _**Windows:**_ <br>
 
 
 _**Linux:**_ <br>
-In this book a Linux Ubuntu x86 version 16.04.6 Xenial Xerus used, which already have the Assembly (_AS_)-module installed. 
-
-
-    Something
+In this book a Linux Ubuntu x86 version 16.04.6 Xenial Xerus used, which already have the GNU Assembler(_AS_) installed. 
+```
+as 
+```
     
 I think you should use an
 `<addr>` element here instead.
